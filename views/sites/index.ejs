@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<div class = "container">
+    <header class = "jumbotron">
+        <div class = "container">
+            <div id="jumboContent">
+                <h1>Heights of Nepal</h1>
+                <p>View Nepal through the lens of people who have been there</p>
+                <p>
+                    <a class = "btn btn-primary btn-md" href = "/sites/new">Add New Site</a>
+                </p>
+            </div>
+        </div>
+    </header>
+    <div class = "row">
+        <div class = "col-lg-12">
+            <h3>Our Most Popular Sites</h3> 
+        </div>
+    </div>
+
+    
+    <div class = "row text-center" style="display:flex; flex-wrap: wrap">
+        <% sites.forEach(function(site){ %>
+        <div class = "col-md-3 col-sm-6">
+            <div class = "thumbnail" id="ind">
+                <img src="/images/upload/<%= site.image %>">
+                <div class = "caption">
+                    <h4><%= site.name %></h4>
+                </div>
+                    <a href="/sites/<%= site._id %>" class = "btn btn-primary btn-md">More Info</a>
+            </div>
+        </div>
+    <% }); %>
+    </div>
+</div>
+
+
+
+<% include ../partials/footer %>

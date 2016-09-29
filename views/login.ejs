@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <div id="signContent">
+        <h1>Login!</h1>
+        <form action="/login" method="post">
+            <div class="input-group form-group">
+               
+                <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" aria-describedby="basic-addon1" required>
+            </div>
+            <input class="btn btn-md btn-primary btn-block" type="submit" value="Login!">
+        </form>
+    </div>
+</div>
+
+<% include ./partials/footer %>
