@@ -80,7 +80,7 @@ router.get("/:id/edit", middleware.checkSiteOwnership, function(req, res){
 });
 
 //UPDATE Route for campground update
-router.put("/:id", middleware.checkSiteOwnership, upload.single('image'),function(req, res){
+/*router.put("/:id", middleware.checkSiteOwnership, upload.single('image'),function(req, res){
     if(req.file) {
         console.log('Image is uploading...');
         var image = req.file.filename;
@@ -101,7 +101,7 @@ router.put("/:id", middleware.checkSiteOwnership, upload.single('image'),functio
             res.redirect("/sites/" + req.params.id);
         }  
     });
-});
+}); */
 
 //DELETE ROUTE FOR CAMPGROUND
 router.delete("/:id", middleware.checkSiteOwnership,function(req, res){

@@ -25,7 +25,6 @@ app.use(flash());
 
  
 
-//seedDB(); //Seed the database
 
 //PASSPORT CONFIGURATION 
 app.use(require("express-session")({
