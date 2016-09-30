@@ -11,7 +11,7 @@ var express         = require("express"),
     User            = require("./models/user"),
     seedDB          = require("./seeds");
 
-//REQUIRING ROUTES    
+ 
 var commentRoutes       = require("./routes/comments"),
     siteRoutes    = require("./routes/sites"),
     indexRoutes         = require("./routes/index");
@@ -24,9 +24,6 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
  
-
-
-//PASSPORT CONFIGURATION 
 app.use(require("express-session")({
     secret: "Once again Venny wins cutest dog!",
     resave: false,
