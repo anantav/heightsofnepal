@@ -40,6 +40,8 @@ router.post("/", middleware.isLoggedIn,function(req, res){
                     comment.save();
                     site.comments.push(comment);
                     site.save();
+                    var datetime = new Date();
+                    console.log(datetime);
                     //redirect campground show page
                     res.redirect("/sites/" + site._id);
                 } 
