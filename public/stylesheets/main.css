@@ -36,9 +36,7 @@ h2 {
     font-family: "Arvo", courier, serif;
 }
 
-.container p{
-    text-align: center;
-}
+
 .jumbotron h1 {
 	margin-top: 0px;
 	margin-bottom: 50px;
@@ -90,6 +88,10 @@ h2 {
     padding: 9px;
 }
 
+.input-group{
+    display: block;
+}
+
 #whoiam  {
     text-align: center;
 }
@@ -123,4 +125,8 @@ h2 {
     max-height: 200;
     max-width: 200px;
     padding: 0;
+}
+
+#footerCopy{
+    text-align: center;
 }
