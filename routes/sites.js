@@ -73,7 +73,8 @@ router.get("/:id/edit", middleware.checkSiteOwnership, function(req, res){
             if(err){
                 console.log(err);
             } else {
-                res.render("sites/edit", {site: foundSite});
+                res.send("The edit route is under construction! Sorry for the inconvinience");
+                //res.render("sites/edit", {site: foundSite});
             }
         });
 });
