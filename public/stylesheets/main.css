@@ -10,6 +10,7 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-top: 70px;
 }
 
 
@@ -28,7 +29,7 @@ footer {
   text-align: center;
   height: 7%;
   bottom:0;
-  position:fixed;
+  /*position:fixed;*/
   width:100%;
 }
 
@@ -85,14 +86,6 @@ h2 {
 }
 
 
-
-#ind img{
-    width:30%;
-	float:left;
-	display: block;
-	margin:1.66%;
-}
-
 .square img{
     text-align: center;
     max-width: 150px;
@@ -129,16 +122,35 @@ h2 {
     opacity: 0.8;
 }
 
+.row .text-center{
+  display:flex; 
+  flex-wrap: wrap
+}
 
 
 #ind .thumbnail{
-    min-height: 50px;
+  display:block;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+/*    min-height: 50px;
     min-width: 50px;
     max-height: 200;
     max-width: 200px;
-    padding: 0;
+    padding: 0;*/
+
 }
 
+#ind img{
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  -ms-interpolation-mode: bicubic;
+  /*  width:30%;
+  float:left;
+  display: block;
+  margin:1.66%;*/
+}
 
 .container.fillup{
   margin-top: 10%;
