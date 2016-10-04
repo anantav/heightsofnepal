@@ -1,28 +1,29 @@
 <% include ./partials/header %>
 
-<div class="container">
-    <div id="signContent">
-        <h1>Sign up!</h1>
+        
+    <div class="container fillup">
+    <h1>Sign up!</h1>
         <form action="/register" method="post">
             <div class="input-group form-group">
                 <input type="text" class="form-control" name="username" placeholder="Username"  required>
             </div>
             <div class="input-group form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password" aria-describedby="basic-addon1" >
+                <input type="password" class="form-control" name="password" placeholder="Password" aria-describedby="basic-addon1" required>
             </div>
             <div class="input-group form-group">
-                <input type="type" class="form-control" name="firstname" placeholder="Firstname" aria-describedby="basic-addon1" >
+                <input type="type" class="form-control" name="firstname" placeholder="Firstname" aria-describedby="basic-addon1" required>
             </div>
             <div class="input-group form-group">
-                <input type="type" class="form-control" name="lastname" placeholder="Lastname" aria-describedby="basic-addon1" >
+                <input type="type" class="form-control" name="lastname" placeholder="Lastname" aria-describedby="basic-addon1" required>
             </div>
             <div class="input-group form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="basic-addon1" >
+                <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="basic-addon1" required>
             </div>
             <button class="btn btn-md btn-primary btn-block">Sign Up!</button>
         </form>
-    </div>
-</div>
+    </div>    
+        
+
 
 
 

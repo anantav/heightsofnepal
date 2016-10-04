@@ -1,16 +1,17 @@
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-  background-image: url("../images/pageBackground.jpg");
-    background-image: url(/assets/img/living.jpg); 
-    background-repeat: no-repeat; 
-    background-position: center;
-    background-attachment: fixed;       
-    webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; 
+body{
+  font-family: "Arvo", courier, serif;
+  color: white  ;
+  background-image: url("../images/background.jpg");
+  text-align: center;  width: 100%;
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-attachment: fixed;       
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 ul.nav,.jumbotron h1 {
 	font-family: "Arvo", courier, serif;
@@ -22,8 +23,13 @@ ul.nav {
 
 footer {
 	background-color: #000000;
-    padding-top: 25px;
-    padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+  height: 7%;
+  bottom:0;
+  position:fixed;
+  width:100%;
 }
 
 hr {
@@ -50,8 +56,17 @@ h2 {
 
 .jumbotron {
   	text-align: center;
-  	background-image: url("../images/background.jpg");
   	color: white;  
+    margin-bottom: 0;
+    padding-top: 50px;
+  padding-bottom: 20px;
+  background-image: url("../images/pageBackground.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;      
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
   .btn-lg {
@@ -60,14 +75,15 @@ h2 {
 
 .homepage{
     text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 0px;
+    padding-bottom: 5em;
 }
 
 .homepage a {
-	color: #00cc00;
+	color: #111111;
 	font-size: medium;
 }
+
 
 
 #ind img{
@@ -92,9 +108,7 @@ h2 {
     display: block;
 }
 
-#whoiam  {
-    text-align: center;
-}
+
 
 #delete-form {
     display: inline;
@@ -109,15 +123,13 @@ h2 {
     text-align: center;
 }
 
-#signContent{
-    text-align: center;
+.container form{    
     width: 30%;
-    margin: 20% auto;
+    margin: 5% auto;
+    opacity: 0.8;
 }
 
-#footImage{
-    position: absolute;
-}
+
 
 #ind .thumbnail{
     min-height: 50px;
@@ -127,6 +139,7 @@ h2 {
     padding: 0;
 }
 
-#footerCopy{
-    text-align: center;
+
+.container.fillup{
+  margin-top: 10%;
 }
