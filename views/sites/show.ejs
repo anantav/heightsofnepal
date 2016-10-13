@@ -20,7 +20,7 @@
                         <em>Submitted By: <%= site.author.username %><em>
                     </p>
                     <% if(currentUser && site.author.id.equals(currentUser._id)){ %>
-                        <a class="btn btn-xs btn-warning" href="/sites/<%= site.id %>/edit">Edit</a>
+                        <a class="btn btn-xs btn-warning" href="/sites/<%= site.id %>/edit">Edit Image Information</a>
                         <form id="delete-form" action="/sites/<%= site._id %>?_method=DELETE" method="POST">
                         <button class="btn btn-xs btn-danger">Delete</button>
                     </form>

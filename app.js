@@ -11,9 +11,10 @@ var express         = require("express"),
     User            = require("./models/user");
 
  
-var commentRoutes       = require("./routes/comments"),
-    siteRoutes    = require("./routes/sites"),
-    indexRoutes         = require("./routes/index");
+var commentRoutes   = require("./routes/comments"),
+    siteRoutes      = require("./routes/sites"),
+    indexRoutes     = require("./routes/index");
+    userRoutes      = require("./routes/users");
     
 mongoose.connect("mongodb://localhost/HON_deployed");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -46,7 +47,8 @@ app.use(function(req, res, next){
 app.use(indexRoutes);
 app.use("/sites", siteRoutes);
 app.use("/sites/:id/comments", commentRoutes);
+app.use("/users/:id", userRoutes);
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(3000, "localhost", function(){
    console.log("HON Server Started"); 
 });

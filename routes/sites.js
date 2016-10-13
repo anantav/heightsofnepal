@@ -17,7 +17,7 @@ router.get("/", function(req, res){
 });
 
 
-router.post("/", middleware.isLoggedIn, upload.single('image'),function(req, res){
+router.post("/", middleware.isLoggedIn,upload.single('image'), function(req, res){
     if(req.file) {
         console.log('Image is uploading...');
         var image = req.file.filename;
@@ -67,27 +67,15 @@ router.get("/:id/edit", middleware.checkSiteOwnership, function(req, res){
             if(err){
                 console.log(err);
             } else {
-                res.send("The edit route is under construction! Sorry for the inconvinience");
-                //res.render("sites/edit", {site: foundSite});
+                /*res.send("The edit route is under construction! Sorry for the inconvinience");*/
+                res.render("sites/edit", {site: foundSite});
             }
         });
 });
 
 //UPDATE Route for campground update
-/*router.put("/:id", middleware.checkSiteOwnership, upload.single('image'),function(req, res){
-    if(req.file) {
-        console.log('Image is uploading...');
-        var image = req.file.filename;
-        console.log('Image upload complete!');
-    } else {
-        console.log('No Image uploaded!');
-        var image = 'noimage.jpg';
-    }
-   var name     = req.body.name;
-   var image    = image;
-   var desc     = req.body.description;
-   var newSite = {name: name, image: image, description:desc};
-    Site.findByIdAndUpdate(req.params.id, newSite, function(err, updatedSite){
+router.put("/:id", middleware.checkSiteOwnership, function(req, res){
+    Site.findByIdAndUpdate(req.params.id, req.body.site, upload.single('image'),function(err, updatedSite){
         if(err){
             res.redirect("/sites");
         } else{
@@ -95,7 +83,7 @@ router.get("/:id/edit", middleware.checkSiteOwnership, function(req, res){
             res.redirect("/sites/" + req.params.id);
         }  
     });
-}); */
+}); 
 
 router.delete("/:id", middleware.checkSiteOwnership,function(req, res){
     Site.findByIdAndRemove(req.params.id, function(err){
