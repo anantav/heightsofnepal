@@ -5,7 +5,7 @@ var User		= require("../models/user");
 var middleware	= require("../middleware");
 
 router.get("/", middleware.isLoggedIn, function(req, res){
-	User.findById(req.params.user_id, function(err, foundUser){
+        User.findById(req.params.id, function(err, foundUser){
 		if(err){
 			console.log(err);
 		}else{
