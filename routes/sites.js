@@ -67,13 +67,13 @@ router.get("/:id/edit", middleware.checkSiteOwnership, function(req, res){
             if(err){
                 console.log(err);
             } else {
-                /*res.send("The edit route is under construction! Sorry for the inconvinience");*/
+                /*res.send("The edit route is under construction! Sorry for the inconvenience");*/
                 res.render("sites/edit", {site: foundSite});
             }
         });
 });
 
-//UPDATE Route for campground update
+//UPDATE Route for site update
 router.put("/:id", middleware.checkSiteOwnership, function(req, res){
     Site.findByIdAndUpdate(req.params.id, req.body.site, upload.single('image'),function(err, updatedSite){
         if(err){

@@ -49,6 +49,10 @@ app.use("/sites", siteRoutes);
 app.use("/sites/:id/comments", commentRoutes);
 app.use("/users/:id", userRoutes);
 
-app.listen(3000, "localhost", function(){
-   console.log("HON Server Started"); 
-});
+if (require.main === module) {
+    app.listen(3000, "localhost", function(){
+       console.log("HON Server Started");
+    });
+}
+
+module.exports = app;
